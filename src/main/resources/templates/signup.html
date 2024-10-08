@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="/css/style.css" rel="stylesheet" />
+<title>ECサイト</title>
+</head>
+<body>
+
+<header>
+  <h1>ECサイト</h1>
+</header>
+
+<div class="signupWrapper">
+  <h2>ユーザー　新規登録</h2>
+  <form name="registerForm" id="registerForm" method="post" action="/ecsite/register">
+    <p>氏名　　　　　　：<input type="text" name="fullName" th:value="${fullName}"/></p>
+    <p>ユーザー名　　　：<input type="text" name="userName" th:value="${userName}"/></p>
+    <p>パスワード　　　：<input type="password" name="password" th:value="${password}"/></p>
+    <button type="submit">登録</button>
+  </form>
+  <p class="error" th:text="${errMessage}"></p>
+</div>
+
+</body>
+</html>
